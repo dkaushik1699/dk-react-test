@@ -1,10 +1,10 @@
 import { TodoItem } from './TodoItem';
 
 export function TodoList({ todos, onToggle, onDelete }) {
-  if (todos.length === 0) {
+  if (!todos || todos.length === 0) {
     return (
       <div className="text-center py-12">
-        <p className="text-gray-400 text-lg">No todos yet. Add one to get started! 🚀</p>
+        <p className="text-gray-400 text-lg">No items yet. Add one to get started.</p>
       </div>
     );
   }

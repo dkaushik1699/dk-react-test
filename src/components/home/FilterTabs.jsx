@@ -13,7 +13,7 @@ export function FilterTabs({ currentFilter, onFilterChange }) {
           onClick={() => onFilterChange(filter.value)}
           className={`px-4 py-2 font-medium transition-colors duration-200 border-b-2 ${
             currentFilter === filter.value
-              ? 'border-blue-500 text-blue-600'
+              ? 'border-slate-800 text-slate-900'
               : 'border-transparent text-gray-600 hover:text-gray-800'
           }`}
         >
