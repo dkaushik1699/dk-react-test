@@ -56,6 +56,7 @@ export function AuthPage() {
 
       <UnauthenticatedTemplate>
         <p className="text-slate-600 mb-6">Sign in to access Azure AD secured content.</p>
+        <p>{`${import.meta.env.VITE_AZURE_REDIRECT_URI}`}</p>
         <button
           onClick={handleLogin}
           className="rounded-lg bg-slate-900 px-5 py-3 text-white hover:bg-slate-800 transition-colors"
