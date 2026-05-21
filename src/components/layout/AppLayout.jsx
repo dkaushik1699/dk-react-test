@@ -31,7 +31,7 @@ export function AppLayout() {
 
       <footer className="border-t border-slate-200 bg-white/90 py-4">
         <div className="mx-auto max-w-5xl px-4 text-sm text-slate-500 sm:px-6">
-          Built with React, Tailwind CSS, and React Router.
+          React and authentication with Microsoft Entra ID.
         </div>
       </footer>
     </div>
