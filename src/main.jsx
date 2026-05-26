@@ -2,12 +2,12 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import { AzureAuthProvider } from './components/auth/AzureAuthProvider.jsx'
+import { AuthProvider } from './components/auth/AzureAuthProvider.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <AzureAuthProvider>
+    <AuthProvider>
       <App />
-    </AzureAuthProvider>
+    </AuthProvider>
   </StrictMode>,
 )
