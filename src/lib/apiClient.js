@@ -1,8 +1,10 @@
 import { InteractionRequiredAuthError } from '@azure/msal-browser';
 import { loginRequest } from '../components/auth/msalConfig';
 
-export const publicApiUrl = 'https://codepush-ardkfzgeeddbe7gx.centralus-01.azurewebsites.net/api/v1/public';
-export const protectedApiUrl = 'https://codepush-ardkfzgeeddbe7gx.centralus-01.azurewebsites.net/api/v1/protected';
+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || 'https://codepush-ardkfzgeeddbe7gx.centralus-01.azurewebsites.net/api/v1';
+
+export const publicApiUrl = `${apiBaseUrl}/public`;
+export const protectedApiUrl = `${apiBaseUrl}/protected`;
 
 export async function getProtectedAccessToken(instance, account, { forceRefresh = false } = {}) {
   try {
