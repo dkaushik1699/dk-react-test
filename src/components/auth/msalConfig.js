@@ -1,5 +1,7 @@
 import { LogLevel } from "@azure/msal-browser";
 
+export const protectedApiScope = "api://6003afdd-c28b-4e0b-a2aa-1af6d53ac1c3/read_users";
+
 export const msalConfig = {
   auth: {
     clientId: import.meta.env.VITE_AZURE_CLIENT_ID || '<YOUR_CLIENT_ID>',
@@ -40,7 +42,6 @@ export const msalConfig = {
 };
 
 export const loginRequest = {
-  // scopes: ['openid', 'profile', 'User.Read'],
-  scopes:[]
+  scopes: [protectedApiScope],
 };
  
